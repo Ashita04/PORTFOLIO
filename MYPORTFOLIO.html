@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Portfolio"/>
+  <meta property="og:image" content="https://live.staticflickr.com/8678/16434617827_1e0f04e79d_b.jpg"/>
+  <meta property="og:description" content="About Ashita Chhabra"/>
+  <meta property="og:url" content="file:///C:/Users/ASHI/Downloads/myportfolio.html"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="627"/>
+  <meta property="og:type" content="website"/> 
+    <title>Portfolio
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+    <style>
+     
+
+
+
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+       nav {
+        background-color: #53315d;
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+        
+      nav a {
+        float:right;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 30px 30px;
+        text-decoration: none;
+        height:10px;
+        font-size: 20px;
+      }
+
+      nav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      #about {
+        background-image: url('black.png');
+        background-size:cover;
+        /* background-position:center; */
+        color: rgb(0, 0, 0);
+        text-align: center;
+        width:100%;
+        padding: 100px 0;
+
+      
+      }
+  .about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 1200px; */
+  margin: auto;
+  gap: 5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  /* margin-left: 0 auto; */
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.about-text {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-text h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #883aa9;
+}
+
+.about-text p {
+  font-size: 1.5em;
+  line-height: 1.5;
+  color: #6b4664;
+}
+
+.about-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 65%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(1.1);
+}
+
+
+      
+  #section {
+        background-color: rgb(240, 240, 240);
+        background-image: url("2.png");
+      }
+h1 {
+        font-size:  55px;
+       text-align: center;
+    }
+#developer-text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.5em;
+        color: #0a0404;
+        text-align: center;
+        margin-top: 20px;
+      }
+   
+  
+
+.ashi {
+  font-size: 4em;
+  color:#fff;
+  background: linear-gradient( 180deg, #fb86ff, #163fd5); 
+  background-clip: text; 
+  color: transparent;
+  /* color: #200707; */
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: wave 2s infinite;
+  left: 30%; 
+  top: 30%; 
+}
+
+    
+       
+#projects {
+     width: 100%;
+      justify-content: center;
+      background-image: url("https://t3.ftcdn.net/jpg/05/54/34/32/360_F_554343221_AegBEKR0HzsnsL9zIVENUy4Zn0L8zH4Q.jpg");
+      background-position: center;
+      background-size: cover;
+      margin: auto;
+      
+      /* float: left; */
+      }
+      .projects{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+        margin:3rem;
+      }
+  .project-box {
+  position: relative;
+  overflow: hidden;
+  /* border-radius: 10px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+ 
+}
+
+.project-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.project-box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54, 206, 206, 0.366);
+  opacity: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition: opacity 0.5s ease;
+}
+
+.project-box:hover .overlay {
+  opacity: 0.9;
+}
+
+.project-box h3 {
+  position: absolute;
+  /* top:50%; */
+  left:50%;
+  transform:translate(-50%, -50%);
+  color: whitesmoke;
+  font-size: 20px;
+  text-align: center;
+  /* bottom: 20px;
+  left: 20px;
+  color: #fff; */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  /* flex-wrap: wrap; */
+}
+
+.project-box:hover {
+  transform: translateY(-10px);
+}
+.project-box:hover img{
+  transform: scale(1.1);
+}
+
+.project-box:hover h3 {
+  opacity: 1;
+}
+.project-container {
+ 
+  justify-content: center;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  margin-top: 20px; 
+}
+
+    
+#portfolio {
+  background-color: #041924;
+  background-image: url("https://wallpapercave.com/wp/wp4779340.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center; 
+}
+
+
+      #portfolio h2 {
+        color: #333;
+      }
+     
+     
+      .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30vh; 
+    }
+
+    .image img {
+      width: 400px;
+      height: 450px;
+      border-radius: 300px;
+    }
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+#portfolio .about-container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.buttons button {
+  background-color: #582b5f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+  background-color: #555;
+}
+   
+    #skills {
+  color: #c6bebe;
+  /* margin-top: 50px; */
+  background-image: url("https://img.freepik.com/premium-photo/luxury-black-background-with-podium-light-circle-mockup-studio-background_649024-10647.jpg");
+  background-size: cover;
+  /* margin-bottom: 40px; */
+  position: center;
+  
+  
+}
+
+.skills h3 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+  /* display: grid; */
+        /* grid-template-columns: repeat(3,1fr); */
+        gap: 2rem;
+        margin:5rem;
+
+}
+.image-container {
+    display: flex;
+}
+.skill-name {
+  flex:content;
+  margin-left: 100px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+
+.progress-bar {
+  width: 50%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 200px;
+  margin-right: 200px;
+  /* animation: fill-in 2s ease-in-out backwards; */
+  transition: width 2s ease-in-out backwards;
+  
+ 
+}
+@keyframes fill-in {
+    from {
+      width: 80%;
+    }
+    to {
+      width: 40;
+    }
+  }
+.progress-bar.fill {
+  width: 50%;
+}
+
+.progress {
+  height: 100%;
+  background-color: #8a448e;
+  border-radius: 0px;
+  animation: fill-in 2s ease backwards;
+}
+#services
+{
+  background-image: url('https://wallpapercave.com/wp/wp10570457.jpg');
+  color: #ddd;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* align-items: flex-start; */
+  flex-wrap: wrap;
+  width:80%;
+  margin: auto;
+  /* max-width: 1200px; */
+  /* height: 400px; */
+  box-shadow: #0a0404 5px;
+ 
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.service-item {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.service-item:nth-child(1)::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 55%;
+  background: url('https://www.innovativeconsulting.co.in/wp-content/uploads/2016/01/web_design.png') no-repeat center center;
+  background-size: cover;
+  margin: 10px auto;
+}
+.service-item:nth-child(2)::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 55%;
+  background: url('https://digitalnock.com/img/graphic.png') no-repeat center center;
+  background-size: cover;
+  margin: 10px auto;
+}
+.service-item:nth-child(3)::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 55%;
+  background: url('https://lalasfintechsolutions.com/assets/techc.png') no-repeat center center;
+  background-size: cover;
+  margin: 10px auto;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+}
+.service-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(200, 208, 212, 0.127) 0%, rgba(244, 49, 198, 0.379) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .service-item:hover::before {
+    opacity: 1;
+  }
+
+.service-item h3 {
+  color: #5c1e5c;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.service-item p {
+  color: #666;
+}
+#contact {
+  background-image: url('https://wallpaperaccess.com/full/1116905.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding:  40px;
+  border-bottom: 3px solid #ffffff;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.contact-box {
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(177, 72, 193, 0.247);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-box:hover {
+  transform: scale(1.05);
+}
+
+.contact-box h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #ece2e2;
+}
+
+.contact-box p {
+  color: #ece5e5;
+  margin: 0;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  opacity: 1;  
+  transform: translateY(0);  
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+.contact-form h3 {
+  font-size: 4em ;
+  margin-bottom: 20px;
+  color: #eee6e6;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #491b4e;
+  color: #f1ecec;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #04478e;
+}
+
+.contact-form.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.social-icons_contact
+{
+  margin-top: 70px;
+}
+
+   
+    
+    #about, #portfolio, #contact, #projects,#services,#skills{
+  min-height: 650px;
+}
+#about, #portfolio, #projects #contact,#services,#skills {
+  padding: 50px 0;
+}
+.typewriter {
+      position: absolute;
+      left: 30%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+
+    .typewriter h1 {
+  font-size: 4.5em;
+  /* margin-bottom: 50%; */
+  margin-top: 0.01em;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3);
+  animation: smoke 3s infinite linear;
+}
+@keyframes smoke {
+  0% {
+    text-shadow: 0 0 10px rgba(183, 51, 235, 0.667), 0 0 20px rgba(213, 56, 205, 0.486), 0 0 30px rgba(201, 43, 236, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3);
+  }
+}
+
+    .typewriter p {
+      font-size: 2.5em;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 200;
+      margin-top:0;
+      margin-bottom: 30%;
+    }
+
+.buttons {
+  position: absolute;
+  /* margin-left: 50px ; */
+  /* margin-right: 40px; */
+  /* bottom: 0; */
+  /* left: 50%; */
+  transform: translateX(-50%);
+  margin-top: 550px;
+  margin-bottom: 30px;
+  margin-left: 460px;
+  
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #55276d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+
+}
+
+button:hover {
+  background-color: #d2dce7;
+}
+
+    .image-space {
+    position:absolute;
+    margin-right: 77%;
+    margin-left: 60%;
+    /* margin-top: 10%;  */
+    transform: translate(0, -50%);
+
+    }
+
+    .image-space img {
+      width: 340px; 
+      /* height: auto; */
+      border-radius: 200%;
+      margin-bottom: 65%; 
+      /* margin-right: 120%; */
+
+    }
+    .image-space img:hover {
+      transform: translateY(-20px);
+    }
+    .social-icons {
+     
+     margin-top: 470px;
+     margin-left: 450px;
+     margin-right: 500px;
+     margin-bottom: auto;
+     /* bottom: 20px; */
+     left: 50%;
+     transform:translateX(-50%);
+     display: flex;
+     justify-content: center;
+     
+   }
+
+   .social-icon {
+     font-size: 1.5em;
+     color: #fff;
+     margin: 4px 10px;
+     transition: color 0.3s ease-in-out;
+     
+   }
+
+   .social-icon:hover {
+     color: #007bff;
+   }
+   .custom-font {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5em;
+   }
+   footer {
+      background-color: #25122b;
+      color: rgb(249, 249, 249);
+      /* text-align:center; */
+      /* margin-bottom: 0; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1em 0;
+      position:static;
+      bottom: 0;
+      width: 100%;
+
+    }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="#about" onclick="scrollToSection('about', event)">Home</a>
+      <a href="#portfolio" onclick="scrollToSection('portfolio', event)">About</a>
+      <a href="#skills" onclick="scrollToSection('skills', event)">My Skills</a>
+      <a href="#services" onclick="scrollToSection('services', event)">Services</a>
+      <a href="#projects" onclick="scrollToSection('projects', event)">Projects</a>
+      <a href="#contact" onclick="scrollToSection('contact', event)">Contact</a>
+
+    </nav>
+    
+    <section id="about">
+      <!-- <div class="ashi"></div> -->
+      <div class="typewriter">
+        <h1>Hi, I am <span class="custom-font"> Ashita</span></h1>
+        <p>A passionate <span id="role">Web Developer</span></p>
+        </div>
+        
+        <div class="buttons">
+          <button onclick="scrollToSection('portfolio')">Learn More</button>
+          <button onclick="scrollToSection('contact')">Contact Me</button>
+        </div> 
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/feed/" target="_blank" class="fab fa-linkedin social-icon"></a>
+          <a href="#" target="_blank" class="fab fa-twitter social-icon"></a>
+          <a href="https://github.com/" target="_blank" class="fab fa-github social-icon"></a>
+          <a href="https://twitter.com/?lang=en" target="_blank" class="fab fa-twitter-square social-icon"></a>
+        </div>
+       <div class="image-space">
+        <img src="Screenshot 2024-02-01 023836.png" alt="Your Name" />
+       </div>
+      </section>
+     
+   
+      <section id="portfolio">  
+        <div class="about-container">
+          <div class="about-text">
+            <h1>About Me</h1>
+            <p>I am Ashita Chhabra, a second-year student pursuing Computer Science engineering. My journey in the world of technology is driven by a profound passion for becoming a proficient developer...</p>
+            
+            <p>During my academic journey, I have not only focused on mastering programming languages like C, C++, and Python but also honed my problem-solving skills and creative thinking abilities. I enjoy taking on challenging projects that push my boundaries and allow me to learn and grow.</p>
+  
+            <p>My commitment to excellence is reflected in my dedication to staying updated with the latest technologies and trends in the ever-evolving field of web development. I believe in the power of continuous learning and strive to apply my knowledge to real-world projects.</p>  
+          </div>
+          <div class="about-image">
+            <img src="photo_2024-01-21_13-03-32.jpg" alt="Ashita Chhabra">
+          </div>
+        </div>
+      </section>
+  
+
+
+    <section id="skills">
+      <h1 style="text-align: center;">Skills</h1>
+      <div class="skills">
+        <div class="skill">
+          <div class="skill-name">Programming language: C, C++</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%;"></div>
+          </div>
+         
+        </div>
+        <div class="skill">
+          <div class="skill-name">Front-end technologies: HTML, CSS, JavaScript</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 75%;"></div>
+          </div>
+        </div>
+        
+        <div class="skill">
+          <div class="skill-name">Communication Skills</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Creative thinking</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 65%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Adaptive Thinking</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Programming Language: Python</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%;"></div>
+          </div>
+        </div>
+    </section>
+    <section id="services">
+      <h1 style=" font-size: 45px; ">Services</h1>
+      <div class="services">
+       
+        <div class="service-item">
+          <h3>Web Design</h3>
+          <p >I offer professional web development services using the latest technologies. From front-end to back-end, I create responsive and 
+            dynamic websites tailored to your needs.</p>
+        </div> 
+        <div class="service-item">
+          <h3>Graphic Design</h3>
+          <p>Bring your ideas to life with creative graphic design services. Whether you need a logo, brochure, or any other design work,
+           I can provide visually appealing solutions.</p>
+        </div>
+        <div class="service-item">
+          <h3>Technical Support</h3>
+          <p>Get reliable technical support services for your business. I can assist with troubleshooting, system maintenance, and ensuring 
+          your technology runs smoothly.</p>
+
+        </div>
+      </section>
+      <section id="projects">
+        <div style="width: 100%;"><h1 class="project-container" style="font-family: Georgia, 'Times New Roman', Times, serif;">Projects</h1></div>
+     <div class="projects">
+      <div class="project-box" id="project1">
+        <img src="https://c1.wallpaperflare.com/preview/811/367/789/technology-computer-creative-design.jpg" alt="Project 1">
+        <div class="overlay"></div>
+        <h3>Project 1</h3>
+      </div>
+      <div class="project-box" id="project2">
+        <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEyL3Jhd3BpeGVsb2ZmaWNlNl9tb2Rlcm5fb2ZmaWNlX2Rlc2lnbl93aXRoX2JyaWdodF9jb21wdXRlcl9vbmVfbV9jOTFmNDllOS0zOWIyLTRlOWQtYTJiOC0yNmNmMDQ5NjI1MjlfMS5qcGc.jpg" alt="Project 2">
+        <div class="overlay"></div>
+        <h3>Project 2</h3>
+      </div>
+      <div class="project-box" id="project3">
+        <img src="https://t3.ftcdn.net/jpg/05/71/06/76/360_F_571067620_JS5T5TkDtu3gf8Wqm78KoJRF1vobPvo6.jpg" alt="Project 3">
+        <div class="overlay"></div>
+        <h3>Project 3</h3>
+      </div> 
+      </div>
+     
+    </section>
+   
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+          <div class="contact-box">
+            <i class="fas fa-envelope social-icon"></i>
+            <h3>Email</h3>
+            <p>chhabraashita4@gmail.com</p>
+          </div>
+          <div class="contact-box">
+            <i class="fas fa-phone-alt social-icon"></i>
+            <h3>Phone</h3>
+            <p>+91 8950112002</p>
+          </div>
+          <div class="contact-box">
+            <i class="fas fa-map-marker-alt social-icon"></i>
+            <h3>Location</h3>
+            <p>Yamuna Nagar, Haryana</p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Contact Us</h3>
+          <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+        <div class="social-icons_contact">
+          <a href="https://www.linkedin.com/feed/" target="_blank" class="fab fa-linkedin social-icon"></a>
+          <a href="#" target="_blank" class="fab fa-twitter social-icon"></a>
+          <a href="https://github.com/" target="_blank" class="fab fa-github social-icon"></a>
+        </div> 
+      </section>
+   
+     
+
+    
+    
+<footer>
+  <p>&copy; Ashi's portfolio. All rights reserved.</p>
+</footer>
+
+<script>
+   function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+    }
+    if (event) {
+    event.preventDefault();
+  }
+  }
+
+  const serviceItems = document.querySelectorAll('.service-item');
+
+  serviceItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+      item.classList.add('hovered');
+    });
+
+    item.addEventListener('mouseout', () => {
+      item.classList.remove('hovered');
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var progressBar = document.querySelector('.progress-bar');
+    var progressBarPosition = progressBar.getBoundingClientRect().top;
+    var windowHeight = window.innerHeight;
+
+    if (progressBarPosition < windowHeight) {
+      progressBar.classList.add('fill');
+    }
+  });
+
+  var role = document.getElementById('role');
+    var roles = ['Web Developer', 'Designer', 'Creative Thinker', 'Problem Solver'];
+    var roleIndex = 0;
+
+    function changeRole() {
+      role.textContent = roles[roleIndex];
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+
+    setInterval(changeRole, 2000); 
+    function scrollToSection(sectionId) {
+  var section = document.getElementById(sectionId);
+  section.scrollIntoView({ behavior: 'smooth' });
+}
+
+</script>
+
+
+  </body>
+</html>
